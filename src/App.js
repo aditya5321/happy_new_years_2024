@@ -11,7 +11,7 @@ function App() {
   };
 
   function timeLeft() {
-    const newYearDate = new Date("january 1, 2024 00:00:00").getTime();
+    const newYearDate = new Date("january 1, 2023 00:00:00").getTime();
     const nowDate = new Date().getTime();
     const remainingTime = newYearDate - nowDate;
     return remainingTime;
@@ -25,7 +25,7 @@ function App() {
           <Typewriter words={newYearMessage} loop={false} cursorStyle={"_"} cursor />
         </span>
         <div className="z-50 text-white font-bold text-2xl">
-          <Countdown date={Date.now() + timeLeft()} onComplete={() => setNewYearMessage(("selamat", "tahun", "Baru", "NewYear", "2024"))} />
+          <Countdown date={Date.now() + timeLeft()} onComplete={() => setNewYearMessage(("Happy", "New", "Year", "2024"))} />
         </div>
       </div>
     </>
