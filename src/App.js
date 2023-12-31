@@ -5,25 +5,10 @@ import { useState } from "react";
 import Countdown from "react-countdown";
 
 function App() {
-  const [newYearMessage, setNewYearMessage] = useState(["Happy New Year 2024"]);
+  const [newYearMessage, setNewYearMessage] = useState(["Bye 2023!"]);
   const ParticleInitialization = async (engine) => {
     await loadFireworksPreset(engine);
   };
 
-
-  return (
-    <>
-      <Particles init={ParticleInitialization} options={{ preset: "fireworks" }} />
-      <div className="flex flex-col justify-center items-center min-h-screen gap-4">
-        <span className="text-white text-4xl font-bold z-50 px-4">
-          <Typewriter words={newYearMessage} loop={false} cursorStyle={"_"} cursor />
-        </span>
-        <div className="z-50 text-white font-bold text-2xl">
-          <Countdown date={Date.now() + timeLeft()} onComplete={() => setNewYearMessage(("Happy", "New", "Year", "2024"))} />
-        </div>
-      </div>
-    </>
-  );
-}
 
 export default App;
