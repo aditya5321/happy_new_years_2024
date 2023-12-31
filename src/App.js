@@ -10,12 +10,6 @@ function App() {
     await loadFireworksPreset(engine);
   };
 
-  function timeLeft() {
-    const newYearDate = new Date("january 1, 2025 00:00:00").getTime();
-    const nowDate = new Date().getTime();
-    const remainingTime = newYearDate - nowDate;
-    return remainingTime;
-  }
 
   return (
     <>
