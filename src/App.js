@@ -5,13 +5,13 @@ import { useState } from "react";
 import Countdown from "react-countdown";
 
 function App() {
-  const [newYearMessage, setNewYearMessage] = useState(["Bye 2023!"]);
+  const [newYearMessage, setNewYearMessage] = useState(["Happy New Year 2024"]);
   const ParticleInitialization = async (engine) => {
     await loadFireworksPreset(engine);
   };
 
   function timeLeft() {
-    const newYearDate = new Date("january 1, 2024 00:00:00").getTime();
+    const newYearDate = new Date("january 1, 2025 00:00:00").getTime();
     const nowDate = new Date().getTime();
     const remainingTime = newYearDate - nowDate;
     return remainingTime;
